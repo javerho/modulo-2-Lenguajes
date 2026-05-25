@@ -1,20 +1,28 @@
 console.log("************** DELIVERABLE 03 *********************");
 
 const source = {
-    name: "Nombre",
-    surname: "Apellido",
-    age: 32
+    name: "Maria",
+    surname: "Ibañez",
+    country: "SPA"
 }
 
 const target ={
-    age:32,
-    
+    name: "Luisa",
+    age: 31,
+    married: true    
 }
 
 const clone = (source) => {
-    const result = source[name]
-    return result;
+    const result = {};
+    for(const key in source){
+        result[key] = source[key];
+    }
+    return result
+}
+const merge = (source, target) => {
+    const result = clone({...target,...source})
+    return result
 }
 
 console.log(clone(source))
-source.name = "paxo";
+console.log(merge(source, target))

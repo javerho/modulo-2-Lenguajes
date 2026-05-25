@@ -8,7 +8,7 @@ const head = (array: number[] | string[] | boolean[]): number | string | boolean
    return array[0];
 }
 
-const tail = (arrayParam: any): any => {
+const tail = (arrayParam: (number | string | boolean)[]): (number | string | boolean)[] => {
    const [,...editedArray] = arrayParam;
    return editedArray;
 }
